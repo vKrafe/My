@@ -1,0 +1,301 @@
+@import "_nullstyle";
+
+$headerbg: #19A15F;
+$name: #fff;
+$allelement: #05FF11;
+$wrapper: #00FFA3;
+$searchbg: transparent;
+$searchmagnifier: #005;
+$searchactive: #fff;
+$bell: #000;
+$bellactive: #fff;
+$dark: #184618;
+$darkLight: #187118;
+$playhover: #fff;
+
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.container {
+	font-size: 20px;
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.header {
+	width: 100%;
+	background-color: $headerbg;
+	height: 40px;
+	&__row{
+		display: flex;
+		align-items: center;
+		height: 40px;
+	}
+	&__logo {
+		width: 24px;
+		height: 24px;
+		& img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.seartext {
+	position: relative;
+	height: 40px;
+	width: 190px;
+	&__text {
+		position: absolute;
+		top: 7px;
+		left: 0;
+		z-index: 1;
+		background-color: $dark;
+		padding: 0 0 0 30px;
+		border-radius: 50px;
+		height: 27px;
+		&:focus{
+			background-color: $searchactive;
+		}
+		&:focus::placeholder {
+			color: $searchactive;
+		}
+	}
+}
+.sear {
+	width: 10px;
+	height: 15px;
+	background: $searchbg;
+	display: grid;
+	margin: 0 0 0 10px;
+	position: absolute;
+	top: 13px;
+	left: 0;
+	z-index: 1;
+	&__circle {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: transparent;
+		border: 2px solid $searchmagnifier;
+	}
+	&__wand {
+		width: 2.7px;
+		height: 7px;
+		background: $searchmagnifier;
+		border-bottom-left-radius: 13px;
+		border-bottom-right-radius: 50px;
+		transform: skew(30deg);
+		margin: -1.7px 0 0 0;
+		justify-self: end;
+	}
+}
+.bellBox {
+	width: 34px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		cursor: pointer;
+		background: $darkLight;
+	}
+	&:active input{
+		background: $bellactive;
+		cursor: pointer;
+	}
+	&:focus input{
+		background: $bellactive;
+		cursor: pointer;
+	}
+	&__bell {
+		height: 17px;
+		width: 17px;
+		background: $bell;
+		cursor: pointer;
+		// flex: 0 0 52%;
+		clip-path: polygon(26% 81%, 74% 81%, 79% 77%, 68% 72%, 68% 42%, 62% 31%, 49% 27%, 36% 32%, 31% 43%, 32% 72%, 22% 76%);
+	}
+	&__tongue {
+		width: 5px;
+		height: 5px;
+		background: $bell;
+		flex: 0 0 auto;
+		margin: -6px 0 0 0;
+		cursor: pointer;
+		clip-path: polygon(24% 73%, 51% 73%, 83% 72%, 80% 81%, 66% 88%, 52% 90%, 40% 88%, 27% 82%);
+	}
+}
+
+.player {
+	display: flex;
+	min-width: 250px;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	&:hover {
+		background: $darkLight;
+		cursor: pointer;
+	}
+	&__namePlay {
+		color: $allelement;
+	}
+}
+.leftArrow {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	&:hover span {
+		background: $playhover;
+	}
+	&__leftTriangle {
+		width: 8px;
+		height: 8px;
+		background: $allelement;
+		clip-path: polygon(0 50%, 100% 100%, 100% 0);
+	}
+}
+.play {
+	width: 16px;
+	height: 16px;
+	display: flex;
+	margin: 0 8px;
+	&:hover span {
+		background: $playhover;
+	}
+	&__triangle {
+		width: 15px;
+		height: 15px;
+		background: $allelement;
+		clip-path: polygon(100% 50%, 0 100%, 0 0);
+	}
+}
+.rightArrow {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin-right: 10px;
+	&:hover span {
+		background: $playhover;
+	}
+	&__righTriangle {
+		width: 8px;
+		height: 8px;
+		background: $allelement;
+		clip-path: polygon(100% 50%, 0 100%, 0 0);
+	}
+}
+.stick {
+	width: 1.2px;
+	height: 8px;
+	background: $allelement;
+}
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 200px;
+	height: 100%;
+	padding: 0 10px;
+	&:hover {
+		background: $darkLight;
+		cursor: pointer;
+	}
+	&:active input {
+		background: $bellactive;
+		cursor: pointer;
+	}
+	&__name {
+		color: $name;
+	}
+	&__foto {
+		width: 24px;
+		height: 24px;
+		border-radius: 100%;
+		overflow: hidden;
+		margin: 0 10px;
+		& img {
+			width: 100%;
+			height: 100%;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+	&__menu {
+		display: flex;
+		width: 24x;
+		height: 24px;
+		justify-content: center;
+		align-items: center;
+	}
+	&__arrow {
+		margin: 17.5px 0 0 0;
+		width: 24px;
+		height: 18px;
+		background: $allelement;
+		clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 93% 100%, 67% 51%, 92% 0);
+		transform: rotate(-90deg);
+		&:focus input {
+			background: $bellactive;
+		}
+	}
+}
+.arrow {
+	margin: 17.5px 0 0 0;
+	width: 24px;
+	height: 18px;
+	background: $allelement;
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 93% 100%, 67% 51%, 92% 0);
+	transform: rotate(-90deg);
+	cursor: pointer;
+	&:focus {
+		// cursor: pointer;
+		background: $bellactive;
+	}
+}
+.bellBox1 {
+	width: 34px;
+	height: 24px;
+	position: relative;
+	background: $darkLight;
+}
+.bellBox1 input:hover:nth-child(n){
+	background: #f00;
+}
+.bell1 {
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	left: 6.4px;
+	height: 17px;
+	width: 17px;
+	background: $bell;
+	cursor: pointer;
+	clip-path: polygon(26% 81%, 74% 81%, 79% 77%, 68% 72%, 68% 42%, 62% 31%, 49% 27%, 36% 32%, 31% 43%, 32% 72%, 22% 76%);
+	&:focus {
+		background: $bellactive;
+		cursor: pointer;
+	}
+}
+.tongue1 {
+	position: absolute;
+	z-index: 1;
+	left: 12px;
+	top: 56px;
+	width: 5px;
+	height: 5px;
+	background: $bell;
+	cursor: pointer;
+	clip-path: polygon(24% 73%, 51% 73%, 83% 72%, 80% 81%, 66% 88%, 52% 90%, 40% 88%, 27% 82%);
+	&:focus {
+		background: $bellactive;
+		cursor: pointer;
+	}
+}
+
+#b1:hover {
+	background: #fff;
+}

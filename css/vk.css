@@ -1,0 +1,467 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border: 0;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  font-size: 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  width: 100%;
+  background-color: #19A15F;
+  height: 40px;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+.header__logo {
+  width: 24px;
+  height: 24px;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.seartext {
+  position: relative;
+  height: 40px;
+  width: 190px;
+}
+
+.seartext__text {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  z-index: 1;
+  background-color: #184618;
+  padding: 0 0 0 30px;
+  border-radius: 50px;
+  height: 27px;
+}
+
+.seartext__text:focus {
+  background-color: #fff;
+}
+
+.seartext__text:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.seartext__text:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+.seartext__text:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+.seartext__text:focus::placeholder {
+  color: #fff;
+}
+
+.sear {
+  width: 10px;
+  height: 15px;
+  background: transparent;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 0 0 10px;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  z-index: 1;
+}
+
+.sear__circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #005;
+}
+
+.sear__wand {
+  width: 2.7px;
+  height: 7px;
+  background: #005;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 50px;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+  margin: -1.7px 0 0 0;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.bellBox {
+  width: 34px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bellBox:hover {
+  cursor: pointer;
+  background: #187118;
+}
+
+.bellBox:active input {
+  background: #fff;
+  cursor: pointer;
+}
+
+.bellBox:focus input {
+  background: #fff;
+  cursor: pointer;
+}
+
+.bellBox__bell {
+  height: 17px;
+  width: 17px;
+  background: #000;
+  cursor: pointer;
+  -webkit-clip-path: polygon(26% 81%, 74% 81%, 79% 77%, 68% 72%, 68% 42%, 62% 31%, 49% 27%, 36% 32%, 31% 43%, 32% 72%, 22% 76%);
+          clip-path: polygon(26% 81%, 74% 81%, 79% 77%, 68% 72%, 68% 42%, 62% 31%, 49% 27%, 36% 32%, 31% 43%, 32% 72%, 22% 76%);
+}
+
+.bellBox__tongue {
+  width: 5px;
+  height: 5px;
+  background: #000;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: -6px 0 0 0;
+  cursor: pointer;
+  -webkit-clip-path: polygon(24% 73%, 51% 73%, 83% 72%, 80% 81%, 66% 88%, 52% 90%, 40% 88%, 27% 82%);
+          clip-path: polygon(24% 73%, 51% 73%, 83% 72%, 80% 81%, 66% 88%, 52% 90%, 40% 88%, 27% 82%);
+}
+
+.player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 250px;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player:hover {
+  background: #187118;
+  cursor: pointer;
+}
+
+.player__namePlay {
+  color: #05FF11;
+}
+
+.leftArrow {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leftArrow:hover span {
+  background: #fff;
+}
+
+.leftArrow__leftTriangle {
+  width: 8px;
+  height: 8px;
+  background: #05FF11;
+  -webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
+          clip-path: polygon(0 50%, 100% 100%, 100% 0);
+}
+
+.play {
+  width: 16px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 8px;
+}
+
+.play:hover span {
+  background: #fff;
+}
+
+.play__triangle {
+  width: 15px;
+  height: 15px;
+  background: #05FF11;
+  -webkit-clip-path: polygon(100% 50%, 0 100%, 0 0);
+          clip-path: polygon(100% 50%, 0 100%, 0 0);
+}
+
+.rightArrow {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+.rightArrow:hover span {
+  background: #fff;
+}
+
+.rightArrow__righTriangle {
+  width: 8px;
+  height: 8px;
+  background: #05FF11;
+  -webkit-clip-path: polygon(100% 50%, 0 100%, 0 0);
+          clip-path: polygon(100% 50%, 0 100%, 0 0);
+}
+
+.stick {
+  width: 1.2px;
+  height: 8px;
+  background: #05FF11;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 200px;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.avatar:hover {
+  background: #187118;
+  cursor: pointer;
+}
+
+.avatar:active input {
+  background: #fff;
+  cursor: pointer;
+}
+
+.avatar__name {
+  color: #fff;
+}
+
+.avatar__foto {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.avatar__foto img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+}
+
+.avatar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24x;
+  height: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.avatar__arrow {
+  margin: 17.5px 0 0 0;
+  width: 24px;
+  height: 18px;
+  background: #05FF11;
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 93% 100%, 67% 51%, 92% 0);
+          clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 93% 100%, 67% 51%, 92% 0);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.avatar__arrow:focus input {
+  background: #fff;
+}
+
+.arrow {
+  margin: 17.5px 0 0 0;
+  width: 24px;
+  height: 18px;
+  background: #05FF11;
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 93% 100%, 67% 51%, 92% 0);
+          clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 93% 100%, 67% 51%, 92% 0);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.arrow:focus {
+  background: #fff;
+}
+
+.bellBox1 {
+  width: 34px;
+  height: 24px;
+  position: relative;
+  background: #187118;
+}
+
+.bellBox1 input:hover:nth-child(n) {
+  background: #f00;
+}
+
+.bell1 {
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  left: 6.4px;
+  height: 17px;
+  width: 17px;
+  background: #000;
+  cursor: pointer;
+  -webkit-clip-path: polygon(26% 81%, 74% 81%, 79% 77%, 68% 72%, 68% 42%, 62% 31%, 49% 27%, 36% 32%, 31% 43%, 32% 72%, 22% 76%);
+          clip-path: polygon(26% 81%, 74% 81%, 79% 77%, 68% 72%, 68% 42%, 62% 31%, 49% 27%, 36% 32%, 31% 43%, 32% 72%, 22% 76%);
+}
+
+.bell1:focus {
+  background: #fff;
+  cursor: pointer;
+}
+
+.tongue1 {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 56px;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  cursor: pointer;
+  -webkit-clip-path: polygon(24% 73%, 51% 73%, 83% 72%, 80% 81%, 66% 88%, 52% 90%, 40% 88%, 27% 82%);
+          clip-path: polygon(24% 73%, 51% 73%, 83% 72%, 80% 81%, 66% 88%, 52% 90%, 40% 88%, 27% 82%);
+}
+
+.tongue1:focus {
+  background: #fff;
+  cursor: pointer;
+}
+
+#b1:hover {
+  background: #fff;
+}
